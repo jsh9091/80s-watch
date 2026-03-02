@@ -31,22 +31,22 @@
 
   <!-- Clock Hands -->
   <g id="hourHandShadow" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-7" y="-77" width="7" height="76" fill="black" />
+    <rect x="$-7" y="-87" width="7" height="86" fill="black" />
   </g>
   <g id="hourHand" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-6" y="-75" width="7" height="75" fill="#ffffff" />
+    <rect x="$-6" y="-85" width="7" height="85" fill="#ffffff" />
   </g>
   <g id="minuteHandShadow" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-5" y="-114" width="5" height="113" fill="black" />
+    <rect x="$-5" y="-134" width="5" height="133" fill="black" />
   </g>
   <g id="minuteHand" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-4" y="-112" width="5" height="112" fill="#ffffff" />
+    <rect x="$-4" y="-132" width="5" height="132" fill="#ffffff" />
   </g>
   <g id="secondHandShadow" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-4" y="-122" width="3" height="150" fill="black" />
+    <rect x="$-4" y="-142" width="3" height="170" fill="black" />
   </g>
   <g id="secondHand" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-2" y="-120" width="3" height="150" fill="red" />
+    <rect x="$-2" y="-140" width="3" height="170" fill="red" />
   </g>
   <circle cx="50%" cy="50%" r="10" fill="red" />
   <circle cx="50%" cy="50%" r="5" fill="black" />
