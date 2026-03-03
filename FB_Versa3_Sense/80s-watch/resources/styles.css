@@ -34,3 +34,11 @@
   height: 100%;
   fill: black;
 }
+
+.numbers {
+  font-size: 33;
+  font-family: FBNucleon-Black;
+  text-anchor: middle;
+  text-length: 3;
+  fill: black;
+}
