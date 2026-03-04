@@ -28,13 +28,28 @@ import * as document from "document";
 // Tick every second
 clock.granularity = "seconds";
 
-// Get a handle on GUI label elements
+// Get handles on GUI label elements
 let hourHand = document.getElementById("hourHand");
 let hourHandShadow = document.getElementById("hourHandShadow");
 let minuteHand = document.getElementById("minuteHand");
 let minuteHandShadow = document.getElementById("minuteHandShadow");
 let secondHand = document.getElementById("secondHand");
 let secondHandShadow = document.getElementById("secondHandShadow");
+
+// Get handles on background design elements 
+let backgroundCircleT = document.getElementById("backgroundCircleT"); // yellow
+let backgroundCircleB = document.getElementById("backgroundCircleB"); // orange
+let innerCircle = document.getElementById("innerCircle"); // black
+let maskRectRight_Right = document.getElementById("maskRectRight_Right"); // red
+let maskRectRight_Left = document.getElementById("maskRectRight_Left"); // green
+let maskRectLeft1_Left = document.getElementById("hourHand"); // yellow
+let maskRectLeft1_Right = document.getElementById("maskRectLeft1_Right"); // green
+let maskRectLeft2_Left = document.getElementById("maskRectLeft2_Left"); // orange 
+let maskRectLeft2_Right = document.getElementById("maskRectLeft2_Right"); // green
+let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left"); // orange 
+let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); // orange 
+let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); // orange 
+let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right"); // orange 
 
 /**
  * Rotates the clock hands to show the curent time.

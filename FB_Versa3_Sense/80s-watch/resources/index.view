@@ -45,40 +45,40 @@
     <rect x="50%+30" y="50%-28" width="168-30" height="50" />
   </mask>  
   <svg mask="#maskRectRight" width="100%" height="100%">
-    <circle cx="50%" cy="50%" r="168" fill="red"/>
-    <circle cx="50%" cy="50%" r="120" fill="green"/>
+    <circle id="maskRectRight_Right" cx="50%" cy="50%" r="168" fill="red"/>
+    <circle id="maskRectRight_Left" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
   <mask id="maskRectLeft1">
     <rect x="0" y="50%-30" width="168" height="20" />
   </mask>  
   <svg mask="#maskRectLeft1" width="100%" height="100%">
-    <circle cx="50%" cy="50%" r="168" fill="yellow"/>
-    <circle cx="50%" cy="50%" r="120" fill="green"/>
+    <circle id="#maskRectLeft1_Left" cx="50%" cy="50%" r="168" fill="yellow"/>
+    <circle id="#maskRectLeft1_Right" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
   <mask id="maskRectLeft2">
     <rect x="0" y="50%+10" width="168" height="20" />
   </mask>  
   <svg mask="#maskRectLeft2" width="100%" height="100%">
-    <circle cx="50%" cy="50%" r="168" fill="orange"/>
-    <circle cx="50%" cy="50%" r="120" fill="green"/>
+    <circle id="maskRectLeft2_Left" cx="50%" cy="50%" r="168" fill="orange"/>
+    <circle id="maskRectLeft2_Right" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
   <mask id="maskRectLeft3">
     <rect x="0" y="50%+50" width="168" height="20" />
   </mask>  
   <svg mask="#maskRectLeft3" width="100%" height="100%">
-    <circle cx="50%" cy="50%" r="168" fill="orange"/>
-    <circle cx="50%" cy="50%" r="120" fill="green"/>
+    <circle  id="maskRectLeft3_Left" cx="50%" cy="50%" r="168" fill="orange"/>
+    <circle id="maskRectLeft3_Right" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
   <mask id="maskRectLeft4">
     <rect x="0" y="50%+90" width="168" height="20" />
   </mask>  
   <svg mask="#maskRectLeft4" width="100%" height="100%">
-    <circle cx="50%" cy="50%" r="168" fill="orange"/>
-    <circle cx="50%" cy="50%" r="120" fill="green"/>
+    <circle  id="maskRectLeft4_Left" cx="50%" cy="50%" r="168" fill="orange"/>
+    <circle  id="maskRectLeft4_Right" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
   <text id="oneLabel" class="numbers" x="240" y="56">1</text>
@@ -90,7 +90,7 @@
   <text id="sevenLabel" class="numbers" x="98" y="304">7</text>
   <text id="eightLabel" class="numbers" x="50" y="257">8</text>
   <text id="nineLabel" class="numbers" x="25" y="177">9</text>
-  <text id="tenLabel" class="numbers" x="50" y="102">10</text>
+  <text id="tenLabel" class="numbers" x="50-2" y="102">10</text>
   <text id="elevenLabel" class="numbers" x="98" y="56">11</text>
   <text id="twelveLabel" class="numbers" x="168" y="38">12</text>
 
