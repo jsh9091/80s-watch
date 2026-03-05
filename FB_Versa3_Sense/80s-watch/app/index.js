@@ -37,19 +37,19 @@ let secondHand = document.getElementById("secondHand");
 let secondHandShadow = document.getElementById("secondHandShadow");
 
 // Get handles on background design elements 
-let backgroundCircleT = document.getElementById("backgroundCircleT"); // yellow
-let backgroundCircleB = document.getElementById("backgroundCircleB"); // orange
-let innerCircle = document.getElementById("innerCircle"); // black
-let maskRectRight_Right = document.getElementById("maskRectRight_Right"); // red
-let maskRectRight_Left = document.getElementById("maskRectRight_Left"); // green
-let maskRectLeft1_Left = document.getElementById("hourHand"); // yellow
-let maskRectLeft1_Right = document.getElementById("maskRectLeft1_Right"); // green
-let maskRectLeft2_Left = document.getElementById("maskRectLeft2_Left"); // orange 
-let maskRectLeft2_Right = document.getElementById("maskRectLeft2_Right"); // green
-let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left"); // orange 
-let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); // orange 
-let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); // orange 
-let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right"); // orange 
+let backgroundCircleT = document.getElementById("backgroundCircleT");
+let backgroundCircleB = document.getElementById("backgroundCircleB");
+let innerCircle = document.getElementById("innerCircle");
+let maskRectRight_Right = document.getElementById("maskRectRight_Right");
+let maskRectRight_Left = document.getElementById("maskRectRight_Left");
+let maskRectLeft1_Left = document.getElementById("maskRectLeft1_Left");
+let maskRectLeft1_Right = document.getElementById("maskRectLeft1_Right");
+let maskRectLeft2_Left = document.getElementById("maskRectLeft2_Left"); 
+let maskRectLeft2_Right = document.getElementById("maskRectLeft2_Right");
+let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left"); 
+let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); 
+let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
+let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right"); 
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -66,6 +66,8 @@ function updateClock() {
   minuteHandShadow.groupTransform.rotate.angle = minutesToAngle(mins);
   secondHand.groupTransform.rotate.angle = secondsToAngle(secs);
   secondHandShadow.groupTransform.rotate.angle = secondsToAngle(secs);
+
+  updateDesignColors();
 }
 
 // Update the clock every tick event
@@ -103,3 +105,29 @@ function secondsToAngle(seconds) {
   return (360 / 60) * seconds;
 }
 
+function updateDesignColors() {
+  let topHalfCircle = "darkorange";
+  let bottomHalfCircle = "fb-dark-gray";
+  let skinnyRects = "greenyellow";
+  let bigRectInside = "fuchsia";
+  let bigRectoutside = "chartreuse";
+  let backgroundCircle = "deepskyblue";
+
+  backgroundCircleT.style.fill = topHalfCircle;
+  maskRectLeft1_Left.style.fill = topHalfCircle;
+
+  backgroundCircleB.style.fill = bottomHalfCircle;
+  maskRectLeft2_Left.style.fill = bottomHalfCircle;
+  maskRectLeft3_Left.style.fill = bottomHalfCircle;
+  maskRectLeft4_Left.style.fill = bottomHalfCircle;
+
+  maskRectLeft1_Right.style.fill = skinnyRects;
+  maskRectLeft2_Right.style.fill = skinnyRects;
+  maskRectLeft3_Right.style.fill = skinnyRects;
+  maskRectLeft4_Right.style.fill = skinnyRects;
+
+  maskRectRight_Left.style.fill = bigRectInside;
+  maskRectRight_Right.style.fill = bigRectoutside;
+
+  innerCircle.style.fill = backgroundCircle;
+}
