@@ -152,5 +152,4 @@ function updateDesignColors() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
-  nineLabel.style.fill = bottomHalfNumbers;
 }

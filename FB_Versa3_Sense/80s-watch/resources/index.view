@@ -82,6 +82,8 @@
     <circle  id="maskRectLeft4_Right" cx="50%" cy="50%" r="120" fill="green"/>
   </svg>
 
+  <circle id="nineCircle" cx="24" cy="50%" r="24" fill="darkorange" />
+
   <text id="oneLabel" class="numbers" x="240" y="56">1</text>
   <text id="twoLabel" class="numbers" x="289" y="102">2</text>
   <text id="threeLabel" class="numbers" x="312" y="177">3</text>
