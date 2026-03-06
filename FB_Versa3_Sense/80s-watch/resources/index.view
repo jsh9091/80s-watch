@@ -36,7 +36,8 @@
     <rect x="0" y="168" width="336" height="168" />
   </mask>  
   <svg mask="#maskCircleBottom" width="100%" height="100%">
-  <circle id="backgroundCircleB" cx="50%" cy="50%" r="168" fill="orange" />
+  <circle id="backgroundCircleB2" cx="50%" cy="50%" r="168" fill="orange" />
+  <circle id="backgroundCircleB" cx="50%" cy="50%" r="163" fill="orange" />
   </svg>
 
   <circle id="innerCircle" cx="50%" cy="50%" r="120" fill="black" />
@@ -50,7 +51,7 @@
   </svg>
 
   <mask id="maskRectLeft1">
-    <rect x="0" y="50%-30" width="168" height="20" />
+    <rect x="20" y="50%-32" width="148" height="20" />
   </mask>  
   <svg mask="#maskRectLeft1" width="100%" height="100%">
     <circle id="maskRectLeft1_Left" cx="50%" cy="50%" r="168" fill="yellow"/>
@@ -58,7 +59,7 @@
   </svg>
 
   <mask id="maskRectLeft2">
-    <rect x="0" y="50%+10" width="168" height="20" />
+    <rect x="20" y="50%+8" width="148" height="20" />
   </mask>  
   <svg mask="#maskRectLeft2" width="100%" height="100%">
     <circle id="maskRectLeft2_Left" cx="50%" cy="50%" r="168" fill="orange"/>
@@ -66,7 +67,7 @@
   </svg>
 
   <mask id="maskRectLeft3">
-    <rect x="0" y="50%+50" width="168" height="20" />
+    <rect x="20" y="50%+48" width="148" height="20" />
   </mask>  
   <svg mask="#maskRectLeft3" width="100%" height="100%">
     <circle  id="maskRectLeft3_Left" cx="50%" cy="50%" r="168" fill="orange"/>
@@ -74,7 +75,7 @@
   </svg>
 
   <mask id="maskRectLeft4">
-    <rect x="0" y="50%+90" width="168" height="20" />
+    <rect x="50" y="50%+88" width="118" height="20" />
   </mask>  
   <svg mask="#maskRectLeft4" width="100%" height="100%">
     <circle  id="maskRectLeft4_Left" cx="50%" cy="50%" r="168" fill="orange"/>
@@ -82,13 +83,13 @@
   </svg>
 
   <text id="oneLabel" class="numbers" x="240" y="56">1</text>
-  <text id="twoLabel" class="numbers" x="287" y="102">2</text>
+  <text id="twoLabel" class="numbers" x="289" y="102">2</text>
   <text id="threeLabel" class="numbers" x="312" y="177">3</text>
-  <text id="fourLabel" class="numbers" x="287" y="257">4</text>
-  <text id="fiveLabel" class="numbers" x="240" y="304">5</text>
-  <text id="sixLabel" class="numbers" x="168" y="325">6</text>
-  <text id="sevenLabel" class="numbers" x="98" y="304">7</text>
-  <text id="eightLabel" class="numbers" x="50" y="257">8</text>
+  <text id="fourLabel" class="numbers" x="287" y="255">4</text>
+  <text id="fiveLabel" class="numbers" x="240" y="302">5</text>
+  <text id="sixLabel" class="numbers" x="168" y="322">6</text>
+  <text id="sevenLabel" class="numbers" x="98" y="302">7</text>
+  <text id="eightLabel" class="numbers" x="50" y="255">8</text>
   <text id="nineLabel" class="numbers" x="25" y="177">9</text>
   <text id="tenLabel" class="numbers" x="50-2" y="102">10</text>
   <text id="elevenLabel" class="numbers" x="98" y="56">11</text>

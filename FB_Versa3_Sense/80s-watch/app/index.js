@@ -39,6 +39,7 @@ let secondHandShadow = document.getElementById("secondHandShadow");
 // Get handles on background design elements 
 let backgroundCircleT = document.getElementById("backgroundCircleT");
 let backgroundCircleB = document.getElementById("backgroundCircleB");
+let backgroundCircleB2 = document.getElementById("backgroundCircleB2");
 let innerCircle = document.getElementById("innerCircle");
 let maskRectRight_Right = document.getElementById("maskRectRight_Right");
 let maskRectRight_Left = document.getElementById("maskRectRight_Left");
@@ -49,7 +50,20 @@ let maskRectLeft2_Right = document.getElementById("maskRectLeft2_Right");
 let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left"); 
 let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); 
 let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
-let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right"); 
+let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right");
+
+let oneLabel = document.getElementById("oneLabel");
+let twoLabel = document.getElementById("twoLabel");
+let threeLabel = document.getElementById("threeLabel");
+let fourLabel = document.getElementById("fourLabel");
+let fiveLabel = document.getElementById("fiveLabel");
+let sixLabel = document.getElementById("sixLabel");
+let sevenLabel = document.getElementById("sevenLabel");
+let eightLabel = document.getElementById("eightLabel");
+let nineLabel = document.getElementById("nineLabel");
+let tenLabel = document.getElementById("tenLabel");
+let elevenLabel = document.getElementById("elevenLabel");
+let twelveLabel = document.getElementById("twelveLabel");
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -107,14 +121,16 @@ function secondsToAngle(seconds) {
 
 function updateDesignColors() {
   let topHalfCircle = "darkorange";
-  let bottomHalfCircle = "fb-dark-gray";
+  let bottomHalfCircle = "black";
   let skinnyRects = "greenyellow";
-  let bigRectInside = "fuchsia";
+  let bigRectInside = "violet";
   let bigRectoutside = "chartreuse";
   let backgroundCircle = "deepskyblue";
+  let bottomHalfNumbers = "white";
 
   backgroundCircleT.style.fill = topHalfCircle;
   maskRectLeft1_Left.style.fill = topHalfCircle;
+  backgroundCircleB2.style.fill = topHalfCircle;
 
   backgroundCircleB.style.fill = bottomHalfCircle;
   maskRectLeft2_Left.style.fill = bottomHalfCircle;
@@ -130,4 +146,11 @@ function updateDesignColors() {
   maskRectRight_Right.style.fill = bigRectoutside;
 
   innerCircle.style.fill = backgroundCircle;
+
+  fourLabel.style.fill = bottomHalfNumbers;
+  fiveLabel.style.fill = bottomHalfNumbers;
+  sixLabel.style.fill = bottomHalfNumbers;
+  sevenLabel.style.fill = bottomHalfNumbers;
+  eightLabel.style.fill = bottomHalfNumbers;
+  nineLabel.style.fill = bottomHalfNumbers;
 }
