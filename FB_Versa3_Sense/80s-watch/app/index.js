@@ -51,6 +51,7 @@ let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left");
 let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); 
 let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
 let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right");
+let clickRect = document.getElementById("clickRect");
 
 let oneLabel = document.getElementById("oneLabel");
 let twoLabel = document.getElementById("twoLabel");
@@ -64,6 +65,9 @@ let nineLabel = document.getElementById("nineLabel");
 let tenLabel = document.getElementById("tenLabel");
 let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
+
+let colorState = 0;
+const maxColorState = 1;
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -119,13 +123,32 @@ function secondsToAngle(seconds) {
   return (360 / 60) * seconds;
 }
 
+/**
+ * Determines the correct color set and calls that color set to be rendered. 
+ */
 function updateDesignColors() {
+  if (colorState === undefined || colorState === null || colorState > maxColorState) {
+    colorState = 0;
+  }
+
+  switch (colorState) {
+    case 0:
+      renderColorSetOne();
+      break;
+    case 1:
+      renderColorSetTwo();
+      break;
+  }
+}
+
+function renderColorSetOne() {
   let topHalfCircle = "darkorange";
   let bottomHalfCircle = "black";
   let skinnyRects = "greenyellow";
   let bigRectInside = "violet";
   let bigRectoutside = "chartreuse";
   let backgroundCircle = "deepskyblue";
+  let topHalfNumbers = "black";
   let bottomHalfNumbers = "white";
 
   backgroundCircleT.style.fill = topHalfCircle;
@@ -147,9 +170,70 @@ function updateDesignColors() {
 
   innerCircle.style.fill = backgroundCircle;
 
+  oneLabel.style.fill = topHalfNumbers;
+  twoLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = topHalfNumbers;
+  nineLabel.style.fill = topHalfNumbers;
+  tenLabel.style.fill = topHalfNumbers;
+  elevenLabel.style.fill = topHalfNumbers;
+  twelveLabel.style.fill = topHalfNumbers;
+
   fourLabel.style.fill = bottomHalfNumbers;
   fiveLabel.style.fill = bottomHalfNumbers;
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
 }
+
+function renderColorSetTwo() {
+  // TODO pick final colors for color set two
+  let topHalfCircle = "black";
+  let bottomHalfCircle = "darkorange";
+  let skinnyRects = "yellow";
+  let bigRectInside = "violet";
+  let bigRectoutside = "deepskyblue";
+  let backgroundCircle = "chartreuse";
+  let topHalfNumbers = "white";
+  let bottomHalfNumbers = "black";
+
+  backgroundCircleT.style.fill = topHalfCircle;
+  maskRectLeft1_Left.style.fill = topHalfCircle;
+  backgroundCircleB2.style.fill = topHalfCircle;
+
+  backgroundCircleB.style.fill = bottomHalfCircle;
+  maskRectLeft2_Left.style.fill = bottomHalfCircle;
+  maskRectLeft3_Left.style.fill = bottomHalfCircle;
+  maskRectLeft4_Left.style.fill = bottomHalfCircle;
+
+  maskRectLeft1_Right.style.fill = skinnyRects;
+  maskRectLeft2_Right.style.fill = skinnyRects;
+  maskRectLeft3_Right.style.fill = skinnyRects;
+  maskRectLeft4_Right.style.fill = skinnyRects;
+
+  maskRectRight_Left.style.fill = bigRectInside;
+  maskRectRight_Right.style.fill = bigRectoutside;
+
+  innerCircle.style.fill = backgroundCircle;
+
+  oneLabel.style.fill = topHalfNumbers;
+  twoLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = topHalfNumbers;
+  nineLabel.style.fill = topHalfNumbers;
+  tenLabel.style.fill = topHalfNumbers;
+  elevenLabel.style.fill = topHalfNumbers;
+  twelveLabel.style.fill = topHalfNumbers;
+
+  fourLabel.style.fill = bottomHalfNumbers;
+  fiveLabel.style.fill = bottomHalfNumbers;
+  sixLabel.style.fill = bottomHalfNumbers;
+  sevenLabel.style.fill = bottomHalfNumbers;
+  eightLabel.style.fill = bottomHalfNumbers;
+}
+
+clickRect.addEventListener("click", (evt) => {
+  colorState++;
+  if (colorState > maxColorState) {
+    colorState = 0;
+  }
+  updateDesignColors();
+});
