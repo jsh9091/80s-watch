@@ -42,3 +42,22 @@
   text-length: 3;
   fill: black;
 }
+
+#heartIcon {
+  x: "202";
+  y: "155";
+  width: "20";
+  height: "24";
+  fill: black;
+  opacity: 1; 
+}
+
+#heartRateLabel {
+  x: "228";
+  y: "176";
+  font-size: 28;
+  font-family: FBNucleon-Bold;
+  text-length: 4;
+  text-anchor: start;
+  fill: black;
+}

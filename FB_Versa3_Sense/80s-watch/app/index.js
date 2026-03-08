@@ -24,6 +24,9 @@
 
 import clock from "clock";
 import * as document from "document";
+import { display } from "display";
+import { me as appbit } from "appbit";
+import { HeartRateSensor } from "heart-rate";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -51,6 +54,8 @@ let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left");
 let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); 
 let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
 let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right");
+let heartIcon = document.getElementById("heartIcon");
+let heartRateLabel = document.getElementById("heartRateLabel");
 let clickRect = document.getElementById("clickRect");
 
 let oneLabel = document.getElementById("oneLabel");
@@ -237,3 +242,40 @@ clickRect.addEventListener("click", (evt) => {
   }
   updateDesignColors();
 });
+
+////////////////////////
+// HeartRateSensor code
+////////////////////////
+// default value for heart rate label
+heartRateLabel.text = "";
+
+if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
+  if (HeartRateSensor) {
+    heartIcon.image = "heart.png"
+    let hrm = new HeartRateSensor();
+    
+    hrm.onreading = function () {
+      // Peek the current sensor values
+      let rate = hrm.heartRate;
+
+      // guard against values we don't want to display
+      if (rate === undefined || rate === null || rate < 0) {
+        rate = "?"
+      }
+
+      heartRateLabel.text = rate;
+    }
+
+    display.addEventListener("change", () => {
+      // Automatically stop the sensor when the screen is off to conserve battery
+      display.on ? hrm.start() : hrm.stop();
+    });
+    hrm.start();
+
+    // And update the display every 1 second
+    setInterval(hrm.onreading, 1000);
+  }
+} else {
+    heartRateLabel.text = "";
+    heartIcon.image = ""
+}
