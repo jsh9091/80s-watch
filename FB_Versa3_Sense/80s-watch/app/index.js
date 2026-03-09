@@ -54,6 +54,7 @@ let maskRectLeft3_Left = document.getElementById("maskRectLeft3_Left");
 let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right"); 
 let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
 let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right");
+let nineCircle = document.getElementById("nineCircle");
 let heartIcon = document.getElementById("heartIcon");
 let heartRateLabel = document.getElementById("heartRateLabel");
 let clickRect = document.getElementById("clickRect");
@@ -147,18 +148,19 @@ function updateDesignColors() {
 }
 
 function renderColorSetOne() {
-  let topHalfCircle = "darkorange";
-  let bottomHalfCircle = "black";
-  let skinnyRects = "greenyellow";
-  let bigRectInside = "violet";
-  let bigRectoutside = "chartreuse";
-  let backgroundCircle = "deepskyblue";
-  let topHalfNumbers = "black";
-  let bottomHalfNumbers = "white";
+  const topHalfCircle = "darkorange";
+  const bottomHalfCircle = "black";
+  const skinnyRects = "greenyellow";
+  const bigRectInside = "violet";
+  const bigRectoutside = "greenyellow";
+  const backgroundCircle = "deepskyblue";
+  const topHalfNumbers = "black";
+  const bottomHalfNumbers = "white";
 
   backgroundCircleT.style.fill = topHalfCircle;
   maskRectLeft1_Left.style.fill = topHalfCircle;
   backgroundCircleB2.style.fill = topHalfCircle;
+  nineCircle.style.fill = topHalfCircle;
 
   backgroundCircleB.style.fill = bottomHalfCircle;
   maskRectLeft2_Left.style.fill = bottomHalfCircle;
@@ -191,19 +193,25 @@ function renderColorSetOne() {
 }
 
 function renderColorSetTwo() {
-  // TODO pick final colors for color set two
-  let topHalfCircle = "black";
-  let bottomHalfCircle = "darkorange";
-  let skinnyRects = "yellow";
-  let bigRectInside = "violet";
-  let bigRectoutside = "deepskyblue";
-  let backgroundCircle = "chartreuse";
+  const paleYellow = "#ffce00";
+  const paleBlue = "#94fffc";
+  const redish = "#f640c1";
+  const blueGreen = "#01eaa9";
+  const purple = "#9e00b2";
+
+  let topHalfCircle = purple;
+  let bottomHalfCircle = "black";
+  let skinnyRects = blueGreen;
+  let bigRectInside = redish;
+  let bigRectoutside = paleBlue;
+  let backgroundCircle = paleYellow;
   let topHalfNumbers = "white";
-  let bottomHalfNumbers = "black";
+  let bottomHalfNumbers = "white";
 
   backgroundCircleT.style.fill = topHalfCircle;
   maskRectLeft1_Left.style.fill = topHalfCircle;
   backgroundCircleB2.style.fill = topHalfCircle;
+  nineCircle.style.fill = topHalfCircle;
 
   backgroundCircleB.style.fill = bottomHalfCircle;
   maskRectLeft2_Left.style.fill = bottomHalfCircle;
@@ -222,7 +230,7 @@ function renderColorSetTwo() {
 
   oneLabel.style.fill = topHalfNumbers;
   twoLabel.style.fill = topHalfNumbers;
-  threeLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = "black";
   nineLabel.style.fill = topHalfNumbers;
   tenLabel.style.fill = topHalfNumbers;
   elevenLabel.style.fill = topHalfNumbers;
@@ -235,6 +243,9 @@ function renderColorSetTwo() {
   eightLabel.style.fill = bottomHalfNumbers;
 }
 
+/**
+ * Listens for user to click the watch screen to update color state.
+ */
 clickRect.addEventListener("click", (evt) => {
   colorState++;
   if (colorState > maxColorState) {
