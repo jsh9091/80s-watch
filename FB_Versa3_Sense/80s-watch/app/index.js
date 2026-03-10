@@ -27,6 +27,7 @@ import * as document from "document";
 import { display } from "display";
 import { me as appbit } from "appbit";
 import { HeartRateSensor } from "heart-rate";
+import { today as activity } from "user-activity";
 
 // Tick every second
 clock.granularity = "seconds";
@@ -55,6 +56,8 @@ let maskRectLeft3_Right = document.getElementById("maskRectLeft3_Right");
 let maskRectLeft4_Left = document.getElementById("maskRectLeft4_Left"); 
 let maskRectLeft4_Right = document.getElementById("maskRectLeft4_Right");
 let nineCircle = document.getElementById("nineCircle");
+let stepsIcon = document.getElementById("stepsIcon");
+let stepCountLabel = document.getElementById("stepCountLabel");
 let heartIcon = document.getElementById("heartIcon");
 let heartRateLabel = document.getElementById("heartRateLabel");
 let clickRect = document.getElementById("clickRect");
@@ -92,6 +95,7 @@ function updateClock() {
   secondHandShadow.groupTransform.rotate.angle = secondsToAngle(secs);
 
   updateDesignColors();
+  updateStepsField();
 }
 
 // Update the clock every tick event
@@ -289,4 +293,33 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
 } else {
     heartRateLabel.text = "";
     heartIcon.image = ""
+}
+
+/**
+ * Sets the steps field. 
+ */
+function updateStepsField() {
+  if (appbit.permissions.granted("access_activity")) {
+    stepCountLabel.text = getSteps().formatted;
+    stepsIcon.image = "steps.png"
+
+  } else {
+    stepCountLabel.text = "";
+    stepsIcon.image = ""
+  }
+}
+
+/**
+ * Gets and formats user step count for the day.
+ * @returns 
+ */
+function getSteps() {
+    let val = activity.adjusted.steps || 0;
+    return {
+        raw: val,
+        formatted:
+            val > 999
+                ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
+                : val,
+    };
 }

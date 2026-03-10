@@ -97,6 +97,9 @@
   <text id="elevenLabel" class="numbers" x="95" y="54">11</text>
   <text id="twelveLabel" class="numbers" x="168" y="36">12</text>
 
+  <image id="stepsIcon" href="steps.png" />
+  <text id="stepCountLabel" />
+
   <image id="heartIcon" href="heart.png" />
   <text id="heartRateLabel" />
 

@@ -43,11 +43,30 @@
   fill: black;
 }
 
+#stepsIcon {
+  x: "116";
+  y: "85";
+  width: "20";
+  height: "25";
+  fill: black; 
+  opacity: 1;
+}
+
+#stepCountLabel {
+  x: "143";
+  y: "107";
+  font-size: 28;
+  font-family: FBNucleon-Medium;
+  text-length: 8;
+  text-anchor: start;
+  fill: black
+}
+
 #heartIcon {
   x: "202";
   y: "155";
   width: "20";
-  height: "24";
+  height: "22";
   fill: black;
   opacity: 1; 
 }
