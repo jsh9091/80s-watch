@@ -76,7 +76,7 @@ let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
 
 let colorState = 0;
-const maxColorState = 1;
+const maxColorState = 2;
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -148,6 +148,9 @@ function updateDesignColors() {
     case 1:
       renderColorSetTwo();
       break;
+    case 2:
+      renderColorSetThree();
+      break;
   }
 }
 
@@ -209,6 +212,57 @@ function renderColorSetTwo() {
   let bigRectInside = redish;
   let bigRectoutside = paleBlue;
   let backgroundCircle = paleYellow;
+  let topHalfNumbers = "white";
+  let bottomHalfNumbers = "white";
+
+  backgroundCircleT.style.fill = topHalfCircle;
+  maskRectLeft1_Left.style.fill = topHalfCircle;
+  backgroundCircleB2.style.fill = topHalfCircle;
+  nineCircle.style.fill = topHalfCircle;
+
+  backgroundCircleB.style.fill = bottomHalfCircle;
+  maskRectLeft2_Left.style.fill = bottomHalfCircle;
+  maskRectLeft3_Left.style.fill = bottomHalfCircle;
+  maskRectLeft4_Left.style.fill = bottomHalfCircle;
+
+  maskRectLeft1_Right.style.fill = skinnyRects;
+  maskRectLeft2_Right.style.fill = skinnyRects;
+  maskRectLeft3_Right.style.fill = skinnyRects;
+  maskRectLeft4_Right.style.fill = skinnyRects;
+
+  maskRectRight_Left.style.fill = bigRectInside;
+  maskRectRight_Right.style.fill = bigRectoutside;
+
+  innerCircle.style.fill = backgroundCircle;
+
+  oneLabel.style.fill = topHalfNumbers;
+  twoLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = "black";
+  nineLabel.style.fill = topHalfNumbers;
+  tenLabel.style.fill = topHalfNumbers;
+  elevenLabel.style.fill = topHalfNumbers;
+  twelveLabel.style.fill = topHalfNumbers;
+
+  fourLabel.style.fill = bottomHalfNumbers;
+  fiveLabel.style.fill = bottomHalfNumbers;
+  sixLabel.style.fill = bottomHalfNumbers;
+  sevenLabel.style.fill = bottomHalfNumbers;
+  eightLabel.style.fill = bottomHalfNumbers;
+}
+
+function renderColorSetThree() {
+  const pink = "#f7adce";
+  const blue = "#7fd3f7";
+  const green = "#84f2b3";
+  const purple = "#c49bdf";
+  const yellow = "#ffde17";
+
+  let topHalfCircle = purple;
+  let bottomHalfCircle = "black";
+  let skinnyRects = yellow;
+  let bigRectInside = pink;
+  let bigRectoutside = green;
+  let backgroundCircle = blue;
   let topHalfNumbers = "white";
   let bottomHalfNumbers = "white";
 
