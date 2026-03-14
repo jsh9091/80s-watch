@@ -76,7 +76,7 @@ let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
 
 let colorState = 0;
-const maxColorState = 4;
+const maxColorState = 5;
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -155,7 +155,10 @@ function updateDesignColors() {
       renderColorSetFour();
       break;
     case 4: 
-    renderColorSetFive();
+      renderColorSetFive();
+    break;
+    case 5:
+      renderColorSetSix();
     break;
   }
 }
@@ -203,6 +206,9 @@ function renderColorSetOne() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "black";
+  heartIcon.style.fill = "black";
 }
 
 function renderColorSetTwo() {
@@ -254,6 +260,9 @@ function renderColorSetTwo() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "black";
+  heartIcon.style.fill = "black";
 }
 
 function renderColorSetThree() {
@@ -305,6 +314,9 @@ function renderColorSetThree() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "black";
+  heartIcon.style.fill = "black";
 }
 
 function renderColorSetFour() {
@@ -355,6 +367,9 @@ function renderColorSetFour() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "black";
+  heartIcon.style.fill = "black";
 }
 
 function renderColorSetFive() {
@@ -405,6 +420,62 @@ function renderColorSetFive() {
   sixLabel.style.fill = bottomHalfNumbers;
   sevenLabel.style.fill = bottomHalfNumbers;
   eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "black";
+  heartIcon.style.fill = "black";
+}
+
+function renderColorSetSix() {
+  const darkPurple = "#450693";
+  const purple = "#8C00FF";
+  const red = "#FF3F7F";
+  const yellow = "#FFC400";
+
+  let topHalfCircle = purple;
+  let bottomHalfCircle = "black";
+  let skinnyRects = darkPurple;
+  let bigRectInside = purple;
+  let bigRectoutside = red;
+  let backgroundCircle = yellow;
+  let topHalfNumbers = "white";
+  let bottomHalfNumbers = "white";
+
+  backgroundCircleT.style.fill = topHalfCircle;
+  maskRectLeft1_Left.style.fill = topHalfCircle;
+  backgroundCircleB2.style.fill = topHalfCircle;
+  nineCircle.style.fill = topHalfCircle;
+
+  backgroundCircleB.style.fill = bottomHalfCircle;
+  maskRectLeft2_Left.style.fill = bottomHalfCircle;
+  maskRectLeft3_Left.style.fill = bottomHalfCircle;
+  maskRectLeft4_Left.style.fill = bottomHalfCircle;
+
+  maskRectLeft1_Right.style.fill = skinnyRects;
+  maskRectLeft2_Right.style.fill = skinnyRects;
+  maskRectLeft3_Right.style.fill = skinnyRects;
+  maskRectLeft4_Right.style.fill = skinnyRects;
+
+  maskRectRight_Left.style.fill = bigRectInside;
+  maskRectRight_Right.style.fill = bigRectoutside;
+
+  innerCircle.style.fill = backgroundCircle;
+
+  oneLabel.style.fill = topHalfNumbers;
+  twoLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = "black";
+  nineLabel.style.fill = topHalfNumbers;
+  tenLabel.style.fill = topHalfNumbers;
+  elevenLabel.style.fill = topHalfNumbers;
+  twelveLabel.style.fill = topHalfNumbers;
+
+  fourLabel.style.fill = bottomHalfNumbers;
+  fiveLabel.style.fill = bottomHalfNumbers;
+  sixLabel.style.fill = bottomHalfNumbers;
+  sevenLabel.style.fill = bottomHalfNumbers;
+  eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "white";
+  heartIcon.style.fill = "white";
 }
 
 /**
