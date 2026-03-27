@@ -76,7 +76,7 @@ let elevenLabel = document.getElementById("elevenLabel");
 let twelveLabel = document.getElementById("twelveLabel");
 
 let colorState = 0;
-const maxColorState = 5;
+const maxColorState = 6;
 
 /**
  * Rotates the clock hands to show the curent time.
@@ -160,6 +160,8 @@ function updateDesignColors() {
     case 5:
       renderColorSetSix();
     break;
+    case 6: 
+    renderColorSetSeven();
   }
 }
 
@@ -436,6 +438,59 @@ function renderColorSetSix() {
   let skinnyRects = darkPurple;
   let bigRectInside = purple;
   let bigRectoutside = red;
+  let backgroundCircle = yellow;
+  let topHalfNumbers = "white";
+  let bottomHalfNumbers = "white";
+
+  backgroundCircleT.style.fill = topHalfCircle;
+  maskRectLeft1_Left.style.fill = topHalfCircle;
+  backgroundCircleB2.style.fill = topHalfCircle;
+  nineCircle.style.fill = topHalfCircle;
+
+  backgroundCircleB.style.fill = bottomHalfCircle;
+  maskRectLeft2_Left.style.fill = bottomHalfCircle;
+  maskRectLeft3_Left.style.fill = bottomHalfCircle;
+  maskRectLeft4_Left.style.fill = bottomHalfCircle;
+
+  maskRectLeft1_Right.style.fill = skinnyRects;
+  maskRectLeft2_Right.style.fill = skinnyRects;
+  maskRectLeft3_Right.style.fill = skinnyRects;
+  maskRectLeft4_Right.style.fill = skinnyRects;
+
+  maskRectRight_Left.style.fill = bigRectInside;
+  maskRectRight_Right.style.fill = bigRectoutside;
+
+  innerCircle.style.fill = backgroundCircle;
+
+  oneLabel.style.fill = topHalfNumbers;
+  twoLabel.style.fill = topHalfNumbers;
+  threeLabel.style.fill = "black";
+  nineLabel.style.fill = topHalfNumbers;
+  tenLabel.style.fill = topHalfNumbers;
+  elevenLabel.style.fill = topHalfNumbers;
+  twelveLabel.style.fill = topHalfNumbers;
+
+  fourLabel.style.fill = bottomHalfNumbers;
+  fiveLabel.style.fill = bottomHalfNumbers;
+  sixLabel.style.fill = bottomHalfNumbers;
+  sevenLabel.style.fill = bottomHalfNumbers;
+  eightLabel.style.fill = bottomHalfNumbers;
+
+  heartRateLabel.style.fill = "white";
+  heartIcon.style.fill = "white";
+}
+
+function renderColorSetSeven() {
+  const green = "#66cc33";
+  const blue = "#02a5ff";
+  const yellow = "#ffcc00";
+  const red = "#ff3300";
+
+  let topHalfCircle = blue;
+  let bottomHalfCircle = "black";
+  let skinnyRects = red;
+  let bigRectInside = red;
+  let bigRectoutside = green;
   let backgroundCircle = yellow;
   let topHalfNumbers = "white";
   let bottomHalfNumbers = "white";
