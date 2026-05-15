@@ -280,7 +280,7 @@ function renderColorSetThree() {
   let bigRectInside = pink;
   let bigRectoutside = green;
   let backgroundCircle = blue;
-  let topHalfNumbers = "white";
+  let topHalfNumbers = "black";
   let bottomHalfNumbers = "white";
 
   backgroundCircleT.style.fill = topHalfCircle;
