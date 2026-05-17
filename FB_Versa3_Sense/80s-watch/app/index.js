@@ -350,7 +350,7 @@ function renderColorSetFour() {
 
   oneLabel.style.fill = topHalfNumbers;
   twoLabel.style.fill = topHalfNumbers;
-  threeLabel.style.fill = "black";
+  threeLabel.style.fill = "white";
   nineLabel.style.fill = topHalfNumbers;
   tenLabel.style.fill = topHalfNumbers;
   elevenLabel.style.fill = topHalfNumbers;
