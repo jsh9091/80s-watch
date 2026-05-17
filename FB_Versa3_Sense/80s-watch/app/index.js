@@ -214,9 +214,9 @@ function renderColorSetTwo() {
 
   let topHalfCircle = purple;
   let bottomHalfCircle = "black";
-  let skinnyRects = blueGreen;
+  let skinnyRects = paleBlue;
   let bigRectInside = redish;
-  let bigRectoutside = paleBlue;
+  let bigRectoutside = blueGreen;
   let backgroundCircle = paleYellow;
   let topHalfNumbers = "white";
   let bottomHalfNumbers = "white";
