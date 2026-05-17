@@ -4,6 +4,6 @@
 
 Note: This clockface is not yet published to the Fitbit app store. 
 
-[Fitbit App Gallery listing](https://gallery.fitbit.com/details/5243d3b2-66f7-4678-bf6a-dd0cfd70472e?key=a5e964fa-7ada-43e4-8f3d-1fcc2abca33f) 
+[Fitbit App Gallery listing](https://gallery.fitbit.com/details/5243d3b2-66f7-4678-bf6a-dd0cfd70472e?key=f2b4cba0-f562-4d10-b4c6-7f9d7ca557ec) 
 
 ![screenshot of watch-face](Screenshot.png)
